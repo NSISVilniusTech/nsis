@@ -1,0 +1,31 @@
+1.
+    a. Minimalus GUI
+    b. BroadcastReceiver atskirame faile
+    c. kelios pranešimų konstantos
+    d. patikrinimas ar Wifi P2P ijungta kartu su WiFi ar ne
+    e. ideta GPIO biblioteke gradle module ir jos funkcijos MainActivity dokumente, bet nenaudojamos pakolkas. P.S. GPS bibliotekos bus idetos veliau
+
+2.
+    a. prideti 2 kintamieji įrenginiu paieskai
+    b. prideti paieskos ijungimo is tabdymo mygtukai. veikimas bus pakeistas i automatini stratavima paleidus app ir velesni perjungima.
+    c. papildyta MainActivity klasė "public class MainActivity extends AppCompatActivity implements View.OnClickListener"
+    d. pridėta onClick klasė. Galima nes c punktas
+    e. pridėtos įrengiu paieskos ir paieskos sustabdymo funkcijos
+    f. sukurta MyPeerListener klasė atskirame faile i kuria kreipiasi iš e punkto
+    g. sukurtas įrenginiu surinkimo sąrašas, kuris atvaizduojamas listView adapteryje
+
+3.
+    a. Padarytas iškarto paieškos startavimas, tačiau galima atskirai valdyti mygtukais
+    b. Padarytas pakartotinis paieškos stratavimas po įrenginio atsijungimo WifiDirectBroadcastReceiver klasėje ir peerdiscovery padaryta public vietoje private funkcija
+          kai įrenginys pasijunges paieskos inizializavimas negalimas kokias 10 ar 15 s ! Tai stabdo Android OS. tačiau panaudojus gijas man nulužta app kad po kažkurio laiko aktyvuotusi
+          padaryta, kad papildomai po "Conncted pranešimo" būtu vėl inizializuojama paieska ir tai suveikia.
+          papildomas išorinis įrenginys gali pasijungti atskirai prie šio įrenginio su savo paieska !
+    c. Igyvendintos įrenginių prisijungimo funkcijos
+    d. setDeviceList funkcijoje padarytas žinomo irenginio aptikimas ir automatiškas prie jo prisiregistravimo uzklausos isiuntimas
+    e. padarytas atsijungimo mygtukas
+            vartotojo įrenginys turėtu turėti atsijungimo algoritmą
+            transporto sistema neturėtu atsijungti, nes neaiškus vartotojo elgesys ir negalime to numatyti
+    f. Susijungus užsidega LED and Transporto dalies įrangos
+
+
+

@@ -1,0 +1,36 @@
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0073ac;
+  color: white;
+  height: 64px;
+}
+
+.title {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  font-size: 1.5em;
+}
+
+.profile {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+
+  .profile-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .mat-icon-button {
+    line-height: normal;
+  }
+
+  .mat-icon {
+    font-size: 2.5em;
+  }
+}

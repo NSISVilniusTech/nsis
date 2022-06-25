@@ -1,0 +1,44 @@
+{
+  "name": "io.cordova.nsisapp",
+  "displayName": "nsisApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cordova": "cordova run android"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^10.1.2",
+    "cordova-browser": "^6.0.0",
+    "cordova-plugin-customurlscheme": "^5.0.2",
+    "cordova-plugin-file": "^6.0.2",
+    "cordova-plugin-geolocation": "^4.1.0",
+    "cordova-plugin-media": "^5.0.3",
+    "cordova-plugin-wifi-direct": "github:NeoLSN/cordova-plugin-wifi-direct"
+  },
+  "cordova": {
+    "platforms": [
+      "browser",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      },
+      "cordova-plugin-media": {},
+      "cordova-plugin-wifi-direct": {},
+      "cordova-plugin-customurlscheme": {
+        "URL_SCHEME": "http",
+        "ANDROID_SCHEME": " ",
+        "ANDROID_HOST": " ",
+        "ANDROID_PATHPREFIX": "/"
+      }
+    }
+  }
+}

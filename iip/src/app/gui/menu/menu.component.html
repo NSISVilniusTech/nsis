@@ -1,0 +1,50 @@
+<!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/o/stop-list" (click)="menuClick()" routerLinkActive="active">Pasirinkti stotelę</a>
+      <a mat-list-item routerLink="/o/trans-list" (click)="menuClick()" routerLinkActive="active">Pasirinkti maršrutą</a>
+      <a mat-list-item routerLink="/o/main" class="color-red">
+        <mat-icon class="color-red">keyboard_arrow_left</mat-icon>Atgal
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="top-menu">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>NSIS</span>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet #templVar="outlet"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<div class="top-menu">
+  <div class="title">NSIS</div>
+  <div class="profile">
+    <div class="profile-info">
+      <div *ngIf="isLoggedIn">{{ userName }}</div>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Profile">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="onLogin()" *ngIf="!isLoggedIn">
+        <mat-icon>login</mat-icon>
+        <span>Prisijungti</span>
+      </button>
+      <button mat-menu-item>
+        <mat-slide-toggle color="primary" [checked]="isAudioEnabled" (change)="onAudioChanged($event)">Audio</mat-slide-toggle>
+      </button>
+      <button mat-menu-item (click)="onLogout()" *ngIf="isLoggedIn">
+        <mat-icon>logout</mat-icon>
+        <span>Atsijungti</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>

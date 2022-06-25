@@ -1,0 +1,20 @@
+<div mat-dialog-title>Artimiausia stotelė</div>
+<div mat-dialog-content>
+  <mat-selection-list (selectionChange)="onChange($event)" [multiple]="false">
+    <mat-list-option *ngFor="let item of data.stops" [value]="item"
+      [selected]="item.stop_id == data.selectedStop.stop_id ? true : false">
+      <div class="stop-list">
+        <div class="dist">
+          {{ showDistance(item.distance) }}
+        </div>
+        <div class="nearest-stops">
+          <div mat-line class="title">{{ item.name }}</div>
+          <div mat-line class="direct">{{ item.direction }} </div>
+        </div>
+      </div>
+    </mat-list-option>
+  </mat-selection-list>
+</div>
+<div mat-dialog-actions class="action-buttons">
+  <button mat-raised-button class="cancel" mat-dialog-close>ATGAL</button>
+</div>

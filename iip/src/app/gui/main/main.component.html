@@ -1,0 +1,70 @@
+<div class="settings-buttons">
+    <button mat-raised-button disableRipple (click)="openStops();">
+        <mat-icon fontSet="material-icons-outlined">pin_drop</mat-icon>
+        <div class="settings-text">
+            Stotelė
+        </div>
+    </button>
+    <button mat-raised-button disableRipple  (click)="openRoutes();">
+        <mat-icon fontSet="material-icons-outlined">airport_shuttle</mat-icon>
+        <div class="settings-text">
+            Maršrutas
+        </div>
+    </button>
+</div>
+<div class="help-button">
+    <button mat-raised-button color="warn" [disabled]="!isTpmConnected" (click)="needHelp(true);">
+        <div class="help-text">
+            <mat-icon fontSet="material-icons-outlined">priority_high</mat-icon>
+            <div class="settings-text">
+                Reikalinga pagalba
+            </div>
+        </div>
+    </button>
+</div>
+<div *ngIf="isStopSelected; else StopNotSelected">
+    <mat-card class="info">
+        <mat-card-content>
+            <div class="info-header">
+                <div class="info-img">
+                    <mat-icon svgIcon="bus_stop"></mat-icon>
+                </div>
+                <div class="stop">
+                    <div class="stop-title">
+                        {{ selectedStop.name }}
+                    </div>
+                    <div class="stop-direction">
+                        {{ selectedStop.direction }}
+                    </div>
+                </div>
+            </div>
+            <mat-divider></mat-divider>
+            <div *ngIf="isRouteSelected; else RouteNotSelected">
+
+
+                <mat-list role="list">
+                    <mat-list-item role="listitem" *ngFor="let r of routes" >
+                        <div class="route">
+                            <div [ngClass]="getTransTypeStyle(r.trans_type)">{{ r.rout_no }}</div>
+                            <div class="arrival">{{ r.arrival_time! > 0 ? "Atvyksta po " + r.arrival_time + " min" : "Atvyksta į stotelę" }}</div>
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+            <ng-template #RouteNotSelected>
+                <div class="no-info">
+                    <div class="no-route">
+                        <h1>Pasirinkite maršrutą</h1>
+                    </div>
+                </div>
+            </ng-template>
+        </mat-card-content>
+    </mat-card>
+</div>
+<ng-template #StopNotSelected>
+    <mat-card class="no-info">
+        <div class="no-stop">
+            <h1>Pasirinkite stotelę</h1>
+        </div>
+    </mat-card>
+</ng-template>

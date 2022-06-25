@@ -1,0 +1,42 @@
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+
+  button {
+    font-size: 28px;
+    height: 80px;
+    width: 480px;
+  }
+
+  .confirm {
+    background-color: #0073ac;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .cancel {
+    background-color: #ac8f00;
+    color: white;
+  }
+}
+
+mat-icon {
+  height: 20px;
+  width: 20px;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.mat-standard-chip {
+  height: auto !important;
+}
+
+.routeNo {
+  display: flex;
+  height: 80px;
+  width: 80px;
+  align-items: center;
+  font-size: 4em;
+}
+

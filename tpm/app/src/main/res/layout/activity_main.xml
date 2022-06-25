@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_activiy_textView_wifi_p2p_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="P2P Status" />
+
+            <TextView
+                android:id="@+id/main_activiy_textView_dicovery_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status" />
+
+            <TextView
+                android:id="@+id/main_activiy_textView_connection_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/main_activity_button_discover_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="START DISCOVERY" />
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/main_activity_button_discover_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STOP DISCOVERY" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/main_activity_button_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/main_activity_button_disconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disconnect" />
+
+        </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView_available_devices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Available devices" />
+
+            <ListView
+                android:id="@+id/main_activity_list_view_devices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+
+
+            <Button
+                android:id="@+id/main_activity_button_configure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Configure" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/main_activity_button_server_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Server start" />
+
+                <Button
+                    android:id="@+id/main_activity_button_server_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Server stop" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/main_acitivity_received_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Received Data" />
+
+            <TextView
+                android:id="@+id/main_acitivity_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/main_activity_button_client_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Send string" />
+
+                <Button
+                    android:id="@+id/main_activity_button_client_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Client Stop" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/main_acitivity_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="289dp" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Latitude"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Longitude"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Durys"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pagalba"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

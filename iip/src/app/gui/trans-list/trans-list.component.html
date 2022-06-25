@@ -1,0 +1,13 @@
+<div mat-dialog-title>Pasirinkite maršrutą</div>
+<div mat-dialog-content>
+<mat-chip-list selectable multiple>
+    <mat-chip #c="matChip" *ngFor="let r of data.routes" [value]="r" (click)="toggle(c)">
+        <mat-icon *ngIf="c.selected">check</mat-icon>
+        <div class="routeNo">{{ r.rout_no }}</div>
+    </mat-chip>
+</mat-chip-list>
+</div>
+<div mat-dialog-actions class="action-buttons">
+    <button mat-raised-button class="confirm" cdkFocusInitial (click)="onConfirm()">PASIRINKTI</button>
+    <button mat-raised-button class="cancel" mat-dialog-close>ATGAL</button>
+</div>

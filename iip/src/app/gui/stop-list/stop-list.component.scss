@@ -1,0 +1,50 @@
+
+mat-list-option[aria-selected="true"] {
+  background: rgba(0, 139, 139, 0.7);
+}
+
+.stop-list {
+  display: flex;
+  flex-direction: row;
+  
+  .dist {
+    font-size: 1em;
+    width: 25%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nearest-stops {
+    width: 50%;
+
+    .title {
+      font-size: 1em;
+    }
+
+    .direct {
+      font-size: 0.7em;
+    }
+  }
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+
+  button {
+    font-size: 28px;
+    height: 80px;
+    width: 480px;
+  }
+
+  .confirm {
+    background-color: #0073ac;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .cancel {
+    background-color: #ac8f00;
+    color: white;
+  }
+}

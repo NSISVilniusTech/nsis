@@ -1,0 +1,130 @@
+.settings-buttons {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 3rem 1.25rem 0rem;
+  }
+
+  .mat-icon {
+    width: auto;
+    height: auto;
+    font-size: 6rem;
+    display: flex;
+    fill: white;
+  }
+}
+
+.help-button {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 1.5rem 1.25rem;
+    height: 100px;
+    width: 300px;
+  }
+
+  .mat-icon {
+    width: auto;
+    height: auto;
+    font-size: 3rem;
+    display: flex;
+  }
+
+  .help-text {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+  }
+
+  .settings-text {
+    height: 60px;
+    align-items: center;
+    display: flex;
+    font-size: 1.5em;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 15px;
+  min-height: 100px;
+}
+
+.no-info {
+  display: flex;
+  margin: 0px 20px;
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  .mat-icon {
+    width: 50px;
+    height: 50px;
+    color: #0073ac;
+    margin: 0px 15px;
+  }
+
+  .stop {
+    display: flex;
+    flex-direction: column;
+
+    .stop-title {
+      margin-top: 15px;
+      font-size: 2em;
+    }
+
+    .stop-direction {
+      font-size: 1.2em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.mat-list-item {
+  margin-top: 15px;
+}
+
+.route {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .number {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .trans-bus {
+    background-color: #0073ac;
+  }
+
+  .trans-bus-g {
+    background-color: green;
+  }
+
+  .trans-trolley {
+    background-color: #dc3131;
+  }
+
+  .arrival {
+    font-size: 1.2em;
+  }
+}
